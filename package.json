@@ -29,7 +29,7 @@
     "jade": "0.32.0",
     "openid": "0.5.x",
     "twit" : "1.1.x",
-    "goo.gl" : "0.0.2",
+    "goo.gl" : "0.1.0",
     "fb" : "0.6.2",
     "express-validator":"0.3.x"
   },

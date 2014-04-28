@@ -256,9 +256,9 @@ var RouteUtils = function(address, port, tlsServerPort, authConfig) {
             } catch (error) {
                 errcb("Failed to require the goo.gl module");
             }
-            googl.shorten(url, function(shortUrl) {
-                cb(shortUrl.id);
-            }); 
+            googl.shorten(url).then(function(shortUrl) {
+              cb(shortUrl);
+            });
         } else {
             errcb("No goo.gl config");
         }
