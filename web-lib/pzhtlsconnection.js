@@ -77,9 +77,7 @@ PzhWebTLSCommunicator.send = function (user, message, callback) {
         jsonString = JSON.stringify(realMsg);
         //logger.log("Sending to TLS Server:\n" + jsonString);
         buf = wUtil.webinosMsgProcessing.jsonStr2Buffer(jsonString);
-        connection.pause();
         connection.write(buf);
-        connection.resume();
         var userid = user.identifier || user;
         if (callback && userid && realMsg.message.type) {
           if (!(userid in callbackStorage)) {
